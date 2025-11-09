@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Mood Dashboard</title>
+  <style>
+    * {
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    button {
+      color: white;
+      background-color: rgb(150, 90, 12);
+      border: 1px solid white;
+      border-radius: 10px;
+      padding: 5px 17px;
+      cursor: pointer;
+    }
+
+    div {
+      border: none;
+      box-shadow: 0px 0px 13px rgb(150, 90, 12);
+      padding: 10px;
+      border-radius: 10px;
+      width: 350px;
+    }
+
+    main {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 100px;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        margin: 50px 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 250px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header style="text-align: center;">
+    <h2>Personal Mood Dashboard</h2>
+    <p style="display: inline;
+    font-weight: 500;
+    font-size: 1.1em;
+    ">Set mode:</p>
+    <button id="mode-btn">Dark</button>
+  </header>
+
+
+  <main>
+    <div>
+      <h3>Greetings...</h3>
+      <p>Hello there, I like to know you <br>
+        Do put down your name in the box below</p>
+      <input type="text" name="name" id="name-input" placeholder="Enter your name..." style="outline-color: rgb(150, 90, 12);
+      height: 30px;
+      border: 1px solid black;
+      border-radius: 5px;
+      " />
+      <p id="hel-fri" style="color: green;">Hello friend!</p>
+    </div>
+
+
+    <div>
+      <h3>Secret message</h3>
+      <p>Hey<span class="name"></span>, Check out on my little secret</p>
+      <button id="secret-btn">Unveil</button>
+      <p id="secret-message" style="font-style: italic; padding: 20px;"></p>
+    </div>
+
+    
+    <div>
+      <h3>A mood box</h3>
+      <p>So what is your mode today like; is it growing or otherwise?</p>
+      <div style="width: 50px;
+      background-color: green;
+      height: 50px;
+      margin: 10px;
+      " class="box"></div>
+
+      <span>
+        <button class="grow-btn">Grow</button>
+        <button class="shrink-btn">Shrink</button>
+      </span>
+    </div>
+  </main>
+
+
+</body>
+<script src="script.js"></script>
+
+</html>

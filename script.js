@@ -1,7 +1,15 @@
-let input = document.getElementById("name-input");
-let greetings = document.getElementById("hel-fri");
-let nam = document.querySelector(".name");
+const input = document.getElementById("name-input");
+const greetings = document.getElementById("hel-fri");
+const nam = document.querySelector(".name");
+const box = document.querySelector(".box")
+const grow = document.querySelector(".grow-btn");
+const shrink = document.querySelector(".shrink-btn");
+const mode = document.getElementById("mode-btn");
+const btn = document.getElementById("secret-btn");
+const message = document.getElementById("secret-message");
 
+
+// live input greeting
 input.addEventListener("input", () => {
   let name = input.value;
   if (name === "") {
@@ -13,12 +21,7 @@ input.addEventListener("input", () => {
 });
 
 
-
-
-let box = document.querySelector(".box")
-let grow = document.querySelector(".grow-btn");
-let shrink = document.querySelector(".shrink-btn");
-
+// the mood box -grow and shrink
 grow.addEventListener("click", () => {
   box.style.transition = "0.5s";
   box.style.width = "70px";
@@ -31,8 +34,7 @@ shrink.addEventListener("click", () => {
 });
 
 
-let mode = document.getElementById("mode-btn");
-
+// mode light and dark
 mode.addEventListener("click", function () {
   if (mode.innerText === "Dark") {
     document.body.style.backgroundColor = "black";
@@ -47,10 +49,7 @@ mode.addEventListener("click", function () {
 });
 
 
-
-let btn = document.getElementById("secret-btn");
-let message = document.getElementById("secret-message");
-
+// secret message 
 btn.addEventListener("click", function () {
   if (btn.innerText === "Unveil" && message.innerText === "") {
     btn.innerText = "Hide";
@@ -63,6 +62,6 @@ btn.addEventListener("click", function () {
 
 
 // The difference between "innerText" and "innerHTML"
-// "innerText" is used just to change the inner content of an element while "innerHTML" 
-// changes the elements and add more structure to the page 
+// "innerText" is used just to change the inner content of an element while "innerHTML"
+// changes the elements and add more structure to the page
 // "innerHTML" allows for the manipulation of the HTML structure
